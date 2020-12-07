@@ -6,8 +6,7 @@
 
 In this is web app, I have tried to shows the ratings of the tv-series from my watchlist from different genres.
 
-> ## Tecnologies used
-
+## Tecnologies used
 > HTML
 > CSS
 > ReactJS
