@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./styles.css";
-import logo from "./series.png";
 
 export default function App() {
   const [genreSelected, genreSelection] = useState("display");
@@ -47,7 +46,7 @@ export default function App() {
       <h1> tv-series-rating</h1>
       <img
         style={{ maxwidth: "600px", width: "80%", borderRadius: "1rem" }}
-        src={logo}
+        src="./a-series.png"
         alt={" "}
       />
       <p> Select a genre to see the ratings from my watch list </p>
