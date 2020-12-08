@@ -5,13 +5,11 @@
   text-align: center;
   background-image: url("series-bg.png");
   background-size: cover;
-  max-width: 600px;
-  margin: auto;
-  padding: 1rem;
+  padding: 2rem;
 }
 body {
   color: white;
-  margin-top: 0rem;
+  margin: 0;
 }
 
 .Bg {
