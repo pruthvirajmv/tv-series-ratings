@@ -3,9 +3,24 @@
 .App {
   font-family: "Montserrat Alternates", sans-serif;
   text-align: center;
+  background-image: url("series-bg.png");
+  background-size: cover;
 }
 body {
-  background-color: #ede9fe;
+  color: white;
   max-width: 600px;
   margin: auto;
+}
+
+.Bg {
+  background-color: #6b7280;
+  border: 1px solid none;
+  border-radius: 0.5rem;
+  padding: 0rem 0.5rem;
+  width: max-content;
+  max-width: 80%;
+  height: max-content;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
 }

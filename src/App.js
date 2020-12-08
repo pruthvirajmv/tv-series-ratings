@@ -12,14 +12,14 @@ export default function App() {
         series: "Death Note",
         rating: "4.5/5"
       },
-      { series: "Fullmetal Alchemist Brotherhood", rating: "4/5" },
+      // { series: "Fullmetal Alchemist Brotherhood", rating: "4/5" },
       { series: "Code Geass", rating: "4/5" }
     ],
     Drama: [
       { series: "GOT", rating: "4.5/5" },
       { series: "Vikings", rating: "4.1/4" }
     ],
-    Mystery: [{ series: "Sherlock", rating: "4.2/5" }],
+    // Mystery: [{ series: "Sherlock", rating: "4.2/5" }],
     Sitcom: [
       { series: "Friends", rating: "4.5/5" },
       { series: "Two and a Half Men", rating: "4.2/5" }
@@ -42,14 +42,12 @@ export default function App() {
   }
 
   return (
-    <div className="App" style={{}}>
-      <h1> tv-series-rating</h1>
-      <img
-        style={{ maxwidth: "600px", width: "80%", borderRadius: "1rem" }}
-        src="./a-series.png"
-        alt={" "}
-      />
-      <p> Select a genre to see the ratings from my watch list </p>
+    <div className="App">
+      <h1 className="Bg"> tv-series-ratings</h1>
+      <small className="Bg">
+        {" "}
+        Select a genre to see the ratings from my watched list{" "}
+      </small>
       <ul>
         {genreArray.map((genre) => {
           return (
@@ -59,12 +57,13 @@ export default function App() {
                 display: "inline-Block",
                 border: "0.5px solid",
                 borderRadius: "0.7rem",
-                padding: "0.5rem 0.8rem",
+                padding: "0.2rem 0.8rem",
                 background: "#6B7280",
                 margin: "1rem 0.5rem",
                 cursor: "pointer",
                 color: "white",
-                fontWeight: "bold"
+                fontWeight: "bold",
+                opacity: "0.9"
               }}
               key={genre}
             >
@@ -74,28 +73,38 @@ export default function App() {
           );
         })}
       </ul>
-
-      <ul>
-        <hr />
+      <ul
+        style={{
+          display: "block",
+          margin: "auto",
+          maxWidth: "350px",
+          borderTopRightRadius: "1rem",
+          borderBottomLeftRadius: "1rem",
+          textAlign: "center"
+        }}
+      >
         {genreList[genreSelected].map((selected) => (
           <li
             key={selected.series}
             style={{
               display: "block",
               textAlign: "left",
-              border: "1px solid white",
+              border: "1px solid black",
               marginTop: "2rem",
-              padding: "0.5rem 0.5rem",
-              width: "250px",
-              background: "#DDD6FE",
-              borderRadius: "0.6rem",
-              fontWeight: "bold"
+              marginBottom: "2rem",
+              padding: "0.3rem 0.5rem",
+              width: "80%",
+              backgroundColor: "#6B7280",
+              borderRadius: "0.4rem",
+              opacity: "0.9"
             }}
           >
             <div
               style={{
                 fontSize: "1.3rem",
-                marginBottom: "0.1rem"
+                marginBottom: "0.1rem",
+                fontWeight: "bold",
+                color: "white"
               }}
             >
               {" "}
@@ -105,6 +114,17 @@ export default function App() {
           </li>
         ))}
       </ul>
+      <h5 className="Bg">
+        back to{" "}
+        <a
+          style={{ textDecoration: "none" }}
+          href="https://pruthvirajmv.netlify.app/projects.html"
+        >
+          {" "}
+          iampruthvirajmv{" "}
+        </a>{" "}
+        profile page{" "}
+      </h5>
     </div>
   );
 }
