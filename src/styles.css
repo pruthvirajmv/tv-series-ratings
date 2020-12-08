@@ -3,13 +3,14 @@
 .App {
   font-family: "Montserrat Alternates", sans-serif;
   text-align: center;
-  background-image: url("series-bg.png");
-  background-size: cover;
+  color: white;
   padding: 2rem;
 }
 body {
-  color: white;
-  margin: 0;
+  background-image: url("series-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .Bg {

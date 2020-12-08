@@ -3,8 +3,10 @@ import "./styles.css";
 
 export default function App() {
   const [genreSelected, genreSelection] = useState("display");
+  // by setting useState to display, by default it will be set and if it is left empty
+  // mapping will not work as it will be pointing to undefined object
 
-  //recall from quiz app
+  //recall from quiz app, creating the objects and lists
   var genreList = {
     display: [{ series: "Selected genre series", rating: "Series rating" }],
     Anime: [
@@ -30,8 +32,10 @@ export default function App() {
     ]
   };
 
+  //converting to array as it is easy to access one by one
   var genreArray = Object.keys(genreList);
-  genreArray.splice(genreArray, 1);
+  //removing the fisrt object as it is created to set defualt to useState
+  genreArray.splice(genreArray, 1); //note: for splicing array numbering starts from 1
 
   // console.log(ratingArray); //observe the output
   // console.log(ratingList.anime); //observe the output
@@ -49,9 +53,11 @@ export default function App() {
         Select a genre to see the ratings from my watched list{" "}
       </small>
       <ul>
+        {/* displaying the genre list throug mapping array created for this*/}
         {genreArray.map((genre) => {
           return (
             <li
+              // creating onClick event
               onClick={() => genreClickHandler(genre)}
               style={{
                 display: "inline-Block",
@@ -83,41 +89,46 @@ export default function App() {
           textAlign: "center"
         }}
       >
-        {genreList[genreSelected].map((selected) => (
-          <li
-            key={selected.series}
-            style={{
-              display: "block",
-              textAlign: "left",
-              border: "1px solid black",
-              marginTop: "2rem",
-              marginBottom: "2rem",
-              padding: "0.3rem 0.5rem",
-              width: "80%",
-              backgroundColor: "#6B7280",
-              borderRadius: "0.4rem",
-              opacity: "0.9"
-            }}
-          >
-            <div
+        {
+          //here genreSelected will be key value in genreList and mapping through
+          //the selected genre
+          genreList[genreSelected].map((selected) => (
+            <li
+              key={selected.series}
               style={{
-                fontSize: "1.3rem",
-                marginBottom: "0.1rem",
-                fontWeight: "bold",
-                color: "white"
+                display: "block",
+                textAlign: "left",
+                border: "1px solid black",
+                marginTop: "2rem",
+                marginBottom: "2rem",
+                padding: "0.3rem 0.5rem",
+                width: "80%",
+                backgroundColor: "#6B7280",
+                borderRadius: "0.4rem",
+                opacity: "0.9"
               }}
             >
-              {" "}
-              {selected.series}{" "}
-            </div>
-            <div style={{}}> {selected.rating} </div>
-          </li>
-        ))}
+              <div
+                style={{
+                  fontSize: "1.3rem",
+                  marginBottom: "0.1rem",
+                  fontWeight: "bold",
+                  color: "white"
+                }}
+              >
+                {" "}
+                {/* accessing the members of selected genre */}
+                {selected.series}{" "}
+              </div>
+              <div> {selected.rating} </div>
+            </li>
+          ))
+        }
       </ul>
       <h5 className="Bg">
         back to{" "}
         <a
-          style={{ textDecoration: "none" }}
+          style={{ textDecoration: "none", color: "black" }}
           href="https://pruthvirajmv.netlify.app/projects.html"
         >
           {" "}
