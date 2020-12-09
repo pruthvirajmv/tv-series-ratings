@@ -54,7 +54,7 @@ export default function App() {
       </small>
       <ul
         style={{
-          marginLeft: "-2rem"
+          marginLeft: "-2.5rem"
         }}
       >
         {/* displaying the genre list throug mapping array created for this*/}
