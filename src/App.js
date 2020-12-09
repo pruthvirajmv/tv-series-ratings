@@ -52,7 +52,11 @@ export default function App() {
         {" "}
         Select a genre to see the ratings from my watched list{" "}
       </small>
-      <ul>
+      <ul
+        style={{
+          marginLeft: "-2rem"
+        }}
+      >
         {/* displaying the genre list throug mapping array created for this*/}
         {genreArray.map((genre) => {
           return (
