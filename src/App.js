@@ -63,7 +63,7 @@ export default function App() {
                 display: "inline-Block",
                 border: "0.5px solid",
                 borderRadius: "0.7rem",
-                padding: "0.2rem 0.8rem",
+                padding: "0.2rem 0.5rem",
                 background: "#6B7280",
                 margin: "1rem 0.5rem",
                 cursor: "pointer",
@@ -128,7 +128,7 @@ export default function App() {
       <h5 className="Bg">
         back to{" "}
         <a
-          style={{ textDecoration: "none", color: "black" }}
+          style={{ textDecoration: "none", color: "orange" }}
           href="https://pruthvirajmv.netlify.app/projects.html"
         >
           {" "}
